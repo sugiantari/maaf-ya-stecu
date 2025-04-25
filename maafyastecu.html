@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Permohonan Maaf untuk STECU AKUUU</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url(https://static.promediateknologi.id/crop/0x435:1080x1194/750x500/webp/photo/p1/04/2025/02/24/Snapinstapp_481411083_18497951956003256_106869654082935245_n_1080-391218278.jpg) no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      color: white; /* Set text color to white to contrast with dark background */
+    }
+
+    .card {
+      background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      padding: 40px;
+      max-width: 400px;
+      text-align: center;
+      animation: floatIn 1s ease-out forwards;
+    }
+
+    @keyframes floatIn {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #f77f00;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      color: #ddd; /* Light grey text for better contrast */
+    }
+
+    .heart {
+      font-size: 3em;
+      color: #f2003c;
+      animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    button {
+      background-color: #f77f00;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d96c00;
+    }
+
+    .hidden-msg {
+      display: none;
+      margin-top: 20px;
+      font-style: italic;
+      color: #444;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      font-size: 1.2em;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="question-card">
+    <h1>Apakah namamu Heman Bim Mahes?</h1>
+    <button onclick="nextQuestion()">Ya, itu aku!</button>
+    <button onclick="nextQuestion()">Bukan, aku bukan Heman Bim Mahes!</button>
+  </div>
+
+  <div class="card" id="anger-card" style="display:none;">
+    <h1 class="question">Seberapa kesal kamu dengan wanitamu?</h1>
+    <button onclick="nextAngerAnswer('0/10')">0/10</button>
+    <button onclick="nextAngerAnswer('10000/10')">10000/10</button>
+  </div>
+
+  <div class="card" id="love-card" style="display:none;">
+    <h1 class="question">Seberapa sayang kamu dengan wanitamu?</h1>
+    <button onclick="nextLoveAnswer('b aja')">b aja</button>
+    <button onclick="nextLoveAnswer('AS BIG AS OBSERVABLE UNIVERSE')">AS BIG AS OBSERVABLE UNIVERSE</button>
+  </div>
+
+  <div class="card" id="apology-card" style="display:none;">
+    <div class="heart">❤️</div>
+    <h1>Maaf ya byy</h1>
+    <p>Aku minta maaf byy, udah buat kamu overthinking jugaa</p>
+    <p>Maaf gabisa nemenin kemarin, kamu gaada salah by 😔</p>
+    <p>Maaci juga sudah nyariin aku byy </p>
+    <p>But deep down... you know you're important to me 🤘</p>
+    <button onclick="showMessage()">Maafin yaaa byyyy 🙏</button>
+    <p class="hidden-msg" id="msg">yess dimaapinnnn 😭❤️ lopyuu stecu akuuu </p>
+  </div>
+
+  <script>
+    function nextQuestion() {
+      document.getElementById("question-card").style.display = "none";
+      document.getElementById("anger-card").style.display = "block";
+    }
+
+    function nextAngerAnswer(answer) {
+      document.getElementById("anger-card").style.display = "none";
+      document.getElementById("love-card").style.display = "block";
+    }
+
+    function nextLoveAnswer(answer) {
+      if (answer === "b aja") {
+        alert("Yahhh maaf:(");
+      } else {
+        alert("YEYYY LOP U STECUU");
+      }
+      document.getElementById("love-card").style.display = "none";
+      document.getElementById("apology-card").style.display = "block";
+    }
+
+    function showMessage() {
+      document.getElementById("msg").style.display = "block";
+    }
+  </script>
+</body>
+</html>
